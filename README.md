@@ -13,7 +13,7 @@
 [<img align="right" alt="🦑" src="https://user-images.githubusercontent.com/22963968/114021347-e3c48b80-9870-11eb-8bc8-998bf39b4d0d.png">](#)
 </div>
 
-<div width="780" align="center>
+<div width="780" align="center">
   <small>Hi there! I'm linuxmobile, i'm old to learn new things but don't worry. I'm continue working on it. i'm austic boy from Argentina/Buenos_Aires. I'm trying to learn Fullstack Developer in NUCBA!</small>
 </div>
 
