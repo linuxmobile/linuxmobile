@@ -2,7 +2,8 @@
 
 <img align="right" width="200" alt="🦑" src="https://count.getloli.com/get/@:linuxmobile?theme=rule34">
 
-<img align="right" width="390" alt="🦑" src="/medias.svg?p"><img align="right" width="390" alt="🦑" src="/achievements.svg"
+<img align="right" width="390" alt="🦑" src="/medias.svg">
+<img align="right" width="390" alt="🦑" src="/achievements.svg">
 
 <img align="left" width="390" alt="🦑" src="/general.svg">
 <img align="left" width="390" src="https://github-readme-stats.vercel.app/api?username=linuxmobile&show_icons=true&theme=radical">
