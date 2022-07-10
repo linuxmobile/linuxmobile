@@ -12,14 +12,10 @@
 
 [<img align="right" alt="🦑" src="https://user-images.githubusercontent.com/22963968/114021347-e3c48b80-9870-11eb-8bc8-998bf39b4d0d.png">](#)
 </div>
-<div>
-  <p>Hi there! I'm linuxmobile, i'm too old to learn but don't worry. I'm continue working on it.</p>
 
-  <p>I speak spanish, but i love english. I'm happy Android enthusiast from Argentina. I'm maintaining Mi MIX 2, building CherishOS and WeebProjekt for it    phone...</p>
-  <p>I've got Asperger, and i'm studying software engineer career.</p>
-  <p>I want to find my way in this life!</p>
-
-  <p>Loves to learn anything new. Feel free to reach me out ;)</p>
+<div width=100%>
+  <small>Hi there! I'm linuxmobile, i'm old to learn new things but don't worry. I'm continue working on it.
+  i'm austic boy from Argentina/Buenos_Aires. I'm trying to learn Fullstack Developer in NUCBA!</small>
 </div>
 
 [![Stats](https://github-readme-stats.vercel.app/api?username=linuxmobile&show_icons=true&theme=radical)](https://github.com/linuxmobile)
