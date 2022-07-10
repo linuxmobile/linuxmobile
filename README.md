@@ -4,6 +4,8 @@
 [<img align="right" width="200" alt="🦑" src="https://count.getloli.com/get/@:linuxmobile?theme=rule34">](https://www.youtube.com/watch?v=PqXPW0oBKgg)
 
 [<img align="right" width="390" alt="🦑" src="/medias.svg?p">](#)
+  
+[<img align="right" width="390" alt="🦑" src="/achievements.svg">](#)
 
 
 [<img align="left" width="390" alt="🦑" src="/general.svg">](#)
