@@ -14,7 +14,7 @@
 </div>
 
 <div align="left" width="390">
-[![](https://raw.githubusercontent.com/SlashNephy/SlashNephy/master/profile-summary-card-output/tokyonight/0-profile-details.svg)]
+![](https://raw.githubusercontent.com/SlashNephy/SlashNephy/master/profile-summary-card-output/tokyonight/0-profile-details.svg)
 </div>
 
 <div align="rigth" width="390">
