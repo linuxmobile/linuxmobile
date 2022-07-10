@@ -6,7 +6,7 @@
 <img align="right" width="390" alt="🦑" src="/achievements.svg">
 
 <img align="left" width="390" alt="🦑" src="/general.svg">
-<img align="left" width="390" src="https://github-readme-stats.vercel.app/api?username=linuxmobile&show_icons=true&theme=rose-pine">
-<img align="left" width="390" src="https://github-readme-stats.vercel.app/api/top-langs/?username=linuxmobile&layout=compact&theme=rose-pine">
+<img align="left" width="390" src="https://github-readme-stats.vercel.app/api?username=linuxmobile&show_icons=true&theme=tokyonigth">
+<img align="left" width="390" src="https://github-readme-stats.vercel.app/api/top-langs/?username=linuxmobile&layout=compact&theme=tokyonight">
 
 <img align="right" alt="🦑" src="https://user-images.githubusercontent.com/22963968/114021347-e3c48b80-9870-11eb-8bc8-998bf39b4d0d.png">
