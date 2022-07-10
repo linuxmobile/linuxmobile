@@ -27,3 +27,10 @@ Loves to learn anything new. Feel free to reach me out ;)
 [![Stats](https://github-readme-stats.vercel.app/api?username=linuxmobile&show_icons=true&theme=radical)](https://github.com/linuxmobile)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=linuxmobile&layout=compact&theme=radical)](https://github.com/linuxmobile)
 
+
+
+[<img align="left" width="390" alt="🦑" src="/general.svg">](#)
+[<img align="right" width="150" alt="🦑" src="https://count.getloli.com/get/@:linuxmobile?theme=rule34">](https://www.youtube.com/watch?v=PqXPW0oBKgg)
+
+[<img align="right" width="390" alt="🦑" src="/medias.svg?p">](#)
+[<img align="right" width="390" alt="🦑" src="https://gist.githubusercontent.com/lowlighter/3c6eaedf50273adfb7a510822672f570/raw/achievements.svg">](#)
