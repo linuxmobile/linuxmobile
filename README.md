@@ -1,4 +1,4 @@
-<img align="left" width="390" src="https://64.media.tumblr.com/62710c9aed5c3f4b7d23700e39bf13a6/ac2a7e65e2f3ff68-50/s400x600/5cc45aa070225393dfe9efb5e648f0cb09c1ca09.gifv">
+<img align="left" width="390" src="https://64.media.tumblr.com/62710c9aed5c3f4b7d23700e39bf13a6/ac2a7e65e2f3ff68-50/s540x810/41fb833ef965bec6fbfb06bc9199fa0455457726.gifv">
 <img align="right" width="150" src="https://count.getloli.com/get/@:linuxmobile?theme=rule34">
 
 <img align="right" width="390" alt="🦑" src="/medias.svg">
