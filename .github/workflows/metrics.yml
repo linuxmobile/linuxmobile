@@ -38,7 +38,7 @@ jobs:
           plugin_topics_mode: starred
           plugin_topics_sort: stars
 
-      - name: 🦑 Media
+      - name: 🦑 Medias
         uses: lowlighter/metrics@latest
         with:
           filename: media.svg
@@ -71,4 +71,4 @@ jobs:
           plugin_screenshot_url: https://linulinks.vercel.app/
           plugin_tweets: yes
           plugin_tweets_limit: 2
-          plugin_tweets_user: linuxmobile
+          plugin_tweets_user: linuxmobileok
