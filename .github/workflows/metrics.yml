@@ -41,7 +41,7 @@ jobs:
       - name: 🦑 Medias
         uses: lowlighter/metrics@latest
         with:
-          filename: media.svg
+          filename: medias.svg
           # Current configuration doesn't require a GitHub token
           token: NOT_NEEDED
 
@@ -62,7 +62,7 @@ jobs:
           plugin_music_played_at: yes
           plugin_music_playlist: https://open.spotify.com/embed/playlist/69gzjQcRJvfSnA1Rf8bhAK
           plugin_music_provider: spotify
-          plugin_music_token: ${{ secrets.SPOTIFY_TOKENS }}
+          plugin_music_token: "${{ secrets.SPOTIFY_CLIENT_ID }}, ${{ secrets.SPOTIFY_CLIENT_SECRET }}, ${{ secrets.SPOTIFY_REFRESH_TOKEN }}"
           plugin_music_time_range: short
           plugin_music_top_type: tracks
           plugin_music_user: elrastaok
