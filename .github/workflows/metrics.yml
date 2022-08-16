@@ -27,14 +27,14 @@ jobs:
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
           plugin_languages_ignored: html, tex, less, dockerfile, makefile, qmake, lex, cmake, gnuplot, scala, c, c++, python, ejs
-          plugin_languages_limit: 8
+          plugin_languages_limit: 3
           plugin_languages_recent_categories: markup, programming
           plugin_languages_recent_days: 14
           plugin_languages_recent_load: 300
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
           plugin_topics: yes
-          plugin_topics_limit: 15
+          plugin_topics_limit: 0
           plugin_topics_mode: icons
           plugin_topics_sort: stars
 
@@ -69,8 +69,8 @@ jobs:
           plugin_screenshot: yes
           plugin_screenshot_background: yes
           plugin_screenshot_selector: body
-          plugin_screenshot_title: Screenshot
-          plugin_screenshot_url: https://linulinks.vercel.app/
+          plugin_screenshot_title: latest
+          plugin_screenshot_url: https://linuland.vercel.app/
           plugin_tweets: yes
           plugin_tweets_token: ${{ secrets.TWITTER_TOKEN }}
           plugin_tweets_limit: 2
