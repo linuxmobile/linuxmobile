@@ -12,7 +12,7 @@
     <td>
       <img align="left" alt="🦑" src="/general.svg">
     </td>
-    <td>
+    <td valign="top">
       <img align="right" alt="🦑" src="/medias.svg">
     </td>
   </tr>
