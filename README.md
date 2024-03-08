@@ -6,7 +6,6 @@
     </td>
     <td valign="top">
       <img align="right" width="180" alt="🦑" src="https://count.getloli.com/get/@:linuxmobile?theme=rule34"/>
-      <img align="right" alt="🦑" src="https://bday-stats.vercel.app/1994-09-08" />
     </td>
   </tr>
   <tr>
