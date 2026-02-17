@@ -1,0 +1,14 @@
+{
+  "name": "bun-profile-stats",
+  "module": "bun_stats.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run serve.ts",
+    "stats": "bun run bun_stats.ts",
+    "export": "bun run export_svg.ts"
+  },
+  "dependencies": {
+    "bun": "^1.2.0",
+    "puppeteer-core": "^24.37.3"
+  }
+}

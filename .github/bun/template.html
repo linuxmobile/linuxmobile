@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Typographic Journal</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&amp;family=JetBrains+Mono:wght@400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1A1A1A",
+              paper: "#F4F1EA",
+              "paper-dark": "#EAE6DD",
+              accent: "#C94B28",
+              line: "#D1CDC5",
+              muted: "#8C8C8C",
+              ink: "#1A1A1A",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            borderRadius: {
+              none: "0px",
+              DEFAULT: "0px",
+            },
+            spacing: {
+              128: "32rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .editorial-text {
+        font-family: "Playfair Display", serif;
+      }
+
+      .mono-text {
+        font-family: "JetBrains Mono", monospace;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-paper text-primary font-sans antialiased flex flex-col selection:bg-accent selection:text-paper"
+  >
+    <header class="w-full border-b border-line bg-paper">
+      <div
+        class="max-w-[1900px] mx-auto flex flex-col lg:flex-row h-[600px] border-l border-r border-line"
+      >
+        <section
+          class="relative w-full lg:w-2/5 flex flex-col border-r border-line bg-paper h-full"
+        >
+          <div
+            class="flex justify-between items-center p-6 lg:p-10 border-b border-line lg:border-none"
+          >
+            <div class="lg:hidden">
+              <span class="material-symbols-outlined">menu</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col justify-center items-center p-8 lg:p-16">
+            <div class="relative group">
+              <div
+                class="w-[240px] h-[240px] overflow-hidden bg-primary mb-6 filter grayscale contrast-125 mix-blend-darken"
+              >
+                <img
+                  id="avatar"
+                  alt="Profile"
+                  class="w-full h-full object-cover"
+                  src="https://github.com/linuxmobile.png"
+                />
+              </div>
+              <div
+                class="absolute -bottom-10 left-0 w-full flex justify-between items-center border-t border-b border-line py-3 text-[10px] sm:text-xs font-mono tracking-wider text-muted uppercase"
+              >
+                <div class="flex flex-col items-center">
+                  <span class="font-bold text-primary" id="total_repos">00</span>
+                  <span>Repos</span>
+                </div>
+                <div class="w-px h-6 bg-line"></div>
+                <div class="flex flex-col items-center">
+                  <span class="font-bold text-primary" id="total_stars">0K</span>
+                  <span>Stars</span>
+                </div>
+                <div class="w-px h-6 bg-line"></div>
+                <div class="flex flex-col items-center">
+                  <span class="font-bold text-primary" id="total_followers">000</span>
+                  <span>Readers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="w-full lg:w-3/5 flex flex-col justify-center px-6 py-12 lg:p-24 bg-paper relative h-full"
+        >
+          <div
+            class="absolute top-6 right-6 lg:top-10 lg:right-10 flex items-center gap-2 text-muted font-mono text-xs"
+          >
+            <span id="current_date">OCT 24</span>
+            <span class="w-8 h-px bg-line"></span>
+            <span id="build_number">NO. 142</span>
+          </div>
+          <div class="max-w-2xl">
+            <p class="font-mono text-accent text-xs tracking-widest mb-6 uppercase">
+              Profile / Editorial
+            </p>
+            <h2
+              class="font-serif text-5xl sm:text-7xl lg:text-8xl leading-[0.9] text-primary mb-8 tracking-tight"
+            >
+              Building the <br />
+              Digital <span class="italic font-light">Environment.</span>
+            </h2>
+            <div class="flex flex-col sm:flex-row gap-8 sm:gap-12 pt-8 border-t border-line">
+              <div class="flex-1 max-w-[280px]">
+                <p class="font-sans text-sm font-medium leading-relaxed mb-1">
+                  By Braian (@linuxmobile) — Frontend Developer, Argentina.
+                </p>
+                <div class="flex gap-4 mt-4">
+                  <a
+                    class="text-xs font-bold uppercase tracking-wider border-b border-transparent pb-0.5"
+                    href="#"
+                    >Email</a
+                  >
+                  <a
+                    class="text-xs font-bold uppercase tracking-wider border-b border-transparent pb-0.5"
+                    href="#"
+                    >Twitter</a
+                  >
+                  <a
+                    class="text-xs font-bold uppercase tracking-wider border-b border-transparent pb-0.5"
+                    href="#"
+                    >Github</a
+                  >
+                </div>
+              </div>
+              <div class="flex-1">
+                <p class="font-serif text-lg sm:text-xl leading-relaxed text-primary/80 italic">
+                  "Code is not just functionality; it is a curated collection of logic and
+                  craftsmanship designed to be read."
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <section class="w-full border-b border-line bg-paper">
+      <div
+        class="max-w-[1900px] mx-auto flex flex-col md:flex-row h-[800px] border-l border-r border-line"
+      >
+        <aside
+          class="w-full md:w-24 md:border-r border-b md:border-b-0 border-line p-6 bg-paper z-40"
+        >
+          <span class="editorial-text text-4xl md:text-2xl italic font-bold text-ink/40">01.</span>
+        </aside>
+        <section class="flex-1 w-full h-full flex flex-col">
+          <div class="grid grid-cols-1 lg:grid-cols-12 h-2/3 border-b border-line">
+            <div
+              class="lg:col-span-8 border-b lg:border-b-0 lg:border-r border-line p-8 md:p-12 lg:p-16 flex flex-col justify-between relative"
+            >
+              <div class="flex justify-between items-start mb-8">
+                <span
+                  class="font-sans text-[11px] font-bold uppercase tracking-[0.15em] text-ink/60"
+                  id="feat_topic"
+                  >Project</span
+                >
+                <div class="flex items-center gap-1 text-ink/60">
+                  <span class="material-symbols-outlined text-[16px]">star</span>
+                  <span class="mono-text text-xs" id="feat_stars">0</span>
+                </div>
+              </div>
+              <div class="max-w-2xl z-10">
+                <h2
+                  class="editorial-text text-5xl md:text-6xl font-normal leading-none mb-6"
+                  id="feat_title"
+                >
+                  ...
+                </h2>
+                <p
+                  class="font-sans text-lg md:text-xl leading-relaxed text-ink/80 mb-8 border-l-2 border-accent pl-6"
+                  id="feat_desc"
+                >
+                  ...
+                </p>
+                <div class="flex flex-wrap gap-2 mb-8" id="feat_tech"></div>
+              </div>
+            </div>
+            <div class="lg:col-span-4 flex flex-col h-full">
+              <article
+                class="flex-1 border-b border-line p-8 md:p-10 relative overflow-hidden flex flex-col justify-between"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <span
+                    class="font-sans text-[10px] font-bold uppercase tracking-[0.15em] text-ink/40"
+                    id="sec1_topic"
+                    >Topic</span
+                  >
+                  <div class="flex items-center gap-1 text-ink/40">
+                    <span class="material-symbols-outlined text-[16px]">star</span>
+                    <span class="mono-text text-xs" id="sec1_stars">0</span>
+                  </div>
+                </div>
+                <div class="relative z-10 mt-auto">
+                  <h3 class="editorial-text text-3xl font-normal mb-2" id="sec1_title">...</h3>
+                  <p class="font-sans text-sm text-ink/60 mb-4 line-clamp-2" id="sec1_desc">...</p>
+                  <span class="mono-text text-[10px] text-ink/40" id="sec1_lang">...</span>
+                </div>
+              </article>
+              <article
+                class="flex-1 border-b lg:border-b-0 border-line p-8 md:p-10 relative overflow-hidden flex flex-col justify-between"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <span
+                    class="font-sans text-[10px] font-bold uppercase tracking-[0.15em] text-ink/40"
+                    id="sec2_topic"
+                    >Topic</span
+                  >
+                  <div class="flex items-center gap-1 text-ink/40">
+                    <span class="material-symbols-outlined text-[16px]">star</span>
+                    <span class="mono-text text-xs" id="sec2_stars">0</span>
+                  </div>
+                </div>
+                <div class="relative z-10 mt-auto">
+                  <h3 class="editorial-text text-3xl font-normal mb-2" id="sec2_title">...</h3>
+                  <p class="font-sans text-sm text-ink/60 mb-4 line-clamp-2" id="sec2_desc">...</p>
+                  <span class="mono-text text-[10px] text-ink/40" id="sec2_lang">...</span>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-1/3">
+            <article
+              class="border-b md:border-b-0 border-r border-line p-8 flex flex-col justify-between h-full"
+            >
+              <div class="flex justify-between items-start mb-4">
+                <span
+                  class="font-sans text-[10px] font-bold uppercase tracking-[0.15em] text-ink/40"
+                  id="ter1_topic"
+                  >Topic</span
+                >
+                <div class="flex items-center gap-1 text-ink/40">
+                  <span class="material-symbols-outlined text-[16px]">star</span>
+                  <span class="mono-text text-xs" id="ter1_stars">0</span>
+                </div>
+              </div>
+              <div class="relative z-10 mt-auto">
+                <h3 class="editorial-text text-3xl font-normal mb-2" id="ter1_title">...</h3>
+                <p class="font-sans text-sm text-ink/60 mb-4 line-clamp-2" id="ter1_desc">...</p>
+                <span class="mono-text text-[10px] text-ink/40" id="ter1_lang">...</span>
+              </div>
+            </article>
+            <article
+              class="border-b md:border-b-0 border-r border-line p-8 flex flex-col justify-between h-full"
+            >
+              <div class="flex justify-between items-start mb-4">
+                <span
+                  class="font-sans text-[10px] font-bold uppercase tracking-[0.15em] text-ink/40"
+                  id="ter2_topic"
+                  >Topic</span
+                >
+                <div class="flex items-center gap-1 text-ink/40">
+                  <span class="material-symbols-outlined text-[16px]">star</span>
+                  <span class="mono-text text-xs" id="ter2_stars">0</span>
+                </div>
+              </div>
+              <div class="relative z-10 mt-auto">
+                <h3 class="editorial-text text-3xl font-normal mb-2" id="ter2_title">...</h3>
+                <p class="font-sans text-sm text-ink/60 mb-4 line-clamp-2" id="ter2_desc">...</p>
+                <span class="mono-text text-[10px] text-ink/40" id="ter2_lang">...</span>
+              </div>
+            </article>
+            <article
+              class="border-b md:border-b-0 border-line p-8 flex flex-col justify-between h-full"
+            >
+              <div class="flex justify-between items-start mb-4">
+                <span
+                  class="font-sans text-[10px] font-bold uppercase tracking-[0.15em] text-ink/40"
+                  id="ter3_topic"
+                  >Topic</span
+                >
+                <div class="flex items-center gap-1 text-ink/40">
+                  <span class="material-symbols-outlined text-[16px]">star</span>
+                  <span class="mono-text text-xs" id="ter3_stars">0</span>
+                </div>
+              </div>
+              <div class="relative z-10 mt-auto">
+                <h3 class="editorial-text text-3xl font-normal mb-2" id="ter3_title">...</h3>
+                <p class="font-sans text-sm text-ink/60 mb-4 line-clamp-2" id="ter3_desc">...</p>
+                <span class="mono-text text-[10px] text-ink/40" id="ter3_lang">...</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="w-full bg-paper border-b border-line">
+      <div
+        class="max-w-[1515px] mx-auto border-l border-r border-line py-16 px-4 md:px-12 flex flex-col items-center"
+      >
+        <div class="flex flex-col w-full">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between border-b border-line pb-8 mb-12"
+          >
+            <div class="max-w-2xl">
+              <span class="block text-accent font-mono text-sm mb-4">03. — SECTION</span>
+              <h1
+                class="text-primary font-serif text-5xl md:text-7xl italic font-bold leading-tight mb-4"
+              >
+                The Chronicle
+              </h1>
+              <p class="text-primary/70 font-serif text-xl md:text-2xl leading-relaxed max-w-lg">
+                Visualizing the cadence of code. A timeline of open source contributions and
+                linguistic proficiency.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2 mt-8 md:mt-0 text-right">
+              <span class="text-xs font-bold uppercase tracking-widest text-primary/40"
+                >Total Contribution Volume</span
+              >
+              <span class="text-4xl font-mono text-primary" id="chronicle_total_vol">0,000</span>
+              <span
+                class="text-xs font-medium text-accent flex justify-end items-center gap-1"
+                id="chronicle_growth"
+              >
+                <span class="material-symbols-outlined text-sm">trending_up</span> +0% vs last year
+              </span>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:divide-x divide-line min-h-[600px] border-b border-line"
+          >
+            <div class="p-0 lg:pr-12 pb-12 lg:pb-0">
+              <div class="flex items-center gap-3 mb-10">
+                <span class="material-symbols-outlined text-accent text-xl">code</span>
+                <h3 class="font-serif text-2xl text-primary italic">Dialects.</h3>
+              </div>
+              <div class="space-y-10" id="chronicle_dialects">
+                <div class="animate-pulse h-4 bg-line w-full rounded"></div>
+              </div>
+              <div class="mt-16 pt-8 border-t border-line">
+                <h4 class="font-mono text-xs uppercase tracking-widest text-primary/40 mb-4">
+                  Core Stack (Detected)
+                </h4>
+                <div class="flex flex-wrap gap-2" id="chronicle_stack"></div>
+              </div>
+            </div>
+            <div class="col-span-1 lg:col-span-2 lg:pl-12 pt-12 lg:pt-0 flex flex-col">
+              <div class="flex items-center justify-between mb-10">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-accent text-xl">timeline</span>
+                  <h3 class="font-serif text-2xl text-primary italic">The Timeline.</h3>
+                </div>
+                <div class="flex gap-6">
+                  <div class="text-right">
+                    <span class="block text-xs font-bold uppercase tracking-widest text-primary/40"
+                      >Current Streak</span
+                    >
+                    <span class="font-mono font-medium text-primary" id="chronicle_streak"
+                      >0 Days</span
+                    >
+                  </div>
+                  <div class="text-right">
+                    <span class="block text-xs font-bold uppercase tracking-widest text-primary/40"
+                      >Peak Activity</span
+                    >
+                    <span class="font-mono font-medium text-primary" id="chronicle_peak_date"
+                      >--</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="relative flex-1 min-h-[300px] w-full mt-4 group/graph">
+                <div class="absolute inset-0 flex flex-col justify-between pointer-events-none">
+                  <div class="w-full border-t border-dashed border-line/50"></div>
+                  <div class="w-full border-t border-dashed border-line/50"></div>
+                  <div class="w-full border-t border-dashed border-line/50"></div>
+                  <div class="w-full border-t border-dashed border-line/50"></div>
+                  <div class="w-full border-b border-line"></div>
+                </div>
+                <svg
+                  class="w-full h-full overflow-visible"
+                  preserveAspectRatio="none"
+                  viewBox="0 0 800 300"
+                  id="chronicle_svg"
+                >
+                  <defs>
+                    <linearGradient id="gradient-fill" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#C94B28" stop-opacity="0.1"></stop>
+                      <stop offset="100%" stop-color="#C94B28" stop-opacity="0"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div
+                class="flex justify-between w-full mt-2 pt-2 border-t border-line text-[10px] md:text-xs font-medium uppercase tracking-widest text-primary/50 font-sans"
+              >
+                <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span
+                ><span>Jun</span> <span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span
+                ><span>Nov</span><span>Dec</span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div class="p-6 bg-white border border-line">
+                  <h4 class="font-serif italic text-xl mb-2 text-primary">Monthly Focus</h4>
+                  <p
+                    class="text-sm leading-relaxed text-primary/70"
+                    id="chronicle_focus_container"
+                  ></p>
+                </div>
+                <div class="p-6 bg-white border border-line flex flex-col justify-between">
+                  <div class="flex justify-between items-start mb-4">
+                    <h4 class="font-serif italic text-xl text-primary">Most Productive</h4>
+                    <span class="material-symbols-outlined text-accent">bolt</span>
+                  </div>
+                  <div>
+                    <div
+                      class="text-3xl font-display font-bold text-primary"
+                      id="chronicle_productive_day"
+                    >
+                      ...
+                    </div>
+                    <div class="text-xs uppercase tracking-widest text-primary/50 mt-1">
+                      Based on commit history
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="flex-grow flex items-center justify-center py-10 opacity-20 pointer-events-none select-none"
+    >
+      <div class="text-center space-y-4">
+        <div class="h-24 w-px bg-line mx-auto"></div>
+        <p class="font-serif italic text-2xl text-primary">End of content stream</p>
+      </div>
+    </div>
+
+    <footer class="w-full relative border-t border-line mt-auto bg-paper">
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-primary rotate-45"
+      ></div>
+      <div class="max-w-[1400px] mx-auto py-16 px-4 md:px-12 border-l border-r border-line">
+        <div class="flex flex-col items-center justify-center text-center space-y-12">
+          <div class="space-y-4">
+            <span class="material-symbols-outlined text-primary text-3xl mb-2">public</span>
+            <h4
+              class="font-display text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-muted"
+            >
+              Published in Buenos Aires, AR
+            </h4>
+          </div>
+          <div class="max-w-md">
+            <p class="font-serif text-2xl md:text-3xl italic text-ink leading-relaxed">
+              Crafting digital environments with a focus on typography and negative space.
+            </p>
+          </div>
+          <div
+            class="pt-12 mt-4 w-full flex flex-col md:flex-row justify-between items-center border-t border-line/30 gap-6"
+          >
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[11px] text-muted uppercase tracking-tight"
+                >Built with Tailwind & HTML</span
+              >
+              <span class="h-px w-8 bg-line"></span>
+              <span class="font-mono text-[11px] text-muted uppercase tracking-tight">v3.0.1</span>
+            </div>
+            <div class="text-center">
+              <p class="font-display text-xs text-muted tracking-wide">
+                © <span id="copyright_year">2026</span> Linuxmobile. Open Source.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-2 w-full bg-ink dark:bg-white/10"></div>
+    </footer>
+
+    <script>
+      async function render() {
+        try {
+          let data = window.profileData;
+          if (!data) {
+            const res = await fetch("/data.json");
+            data = await res.json();
+          }
+
+          const formatStars = (count) => {
+            if (count < 1000) return count.toString();
+            return (count / 1000).toFixed(1) + "k";
+          };
+
+          if (data.hero) {
+            document.getElementById("total_repos").innerText = data.hero.total_repos || "00";
+            const stars = data.hero.total_stars || 0;
+            document.getElementById("total_stars").innerText = formatStars(stars).toUpperCase();
+            document.getElementById("total_followers").innerText =
+              data.hero.total_followers || "000";
+          }
+
+          const now = new Date();
+          const month = now.toLocaleString("default", { month: "short" }).toUpperCase();
+          const day = now.getDate();
+          document.getElementById("current_date").innerText = `${month} ${day}`;
+          document.getElementById("copyright_year").innerText = now.getFullYear();
+
+          const start = new Date(now.getFullYear(), 0, 0);
+          const diff = now - start;
+          const oneDay = 1000 * 60 * 60 * 24;
+          const dayOfYear = Math.floor(diff / oneDay);
+          document.getElementById("build_number").innerText = `NO. ${dayOfYear}`;
+
+          if (data.pinned && data.pinned.length >= 6) {
+            const repos = ["feat", "sec1", "sec2", "ter1", "ter2", "ter3"];
+            repos.forEach((id, idx) => {
+              const repo = data.pinned[idx];
+              if (!repo) return;
+              const titleEl = document.getElementById(`${id}_title`);
+              if (titleEl) titleEl.innerText = repo.title;
+              const descEl = document.getElementById(`${id}_desc`);
+              if (descEl) descEl.innerText = repo.description;
+              const starsEl = document.getElementById(`${id}_stars`);
+              if (starsEl) starsEl.innerText = formatStars(repo.stars);
+              const topicEl = document.getElementById(`${id}_topic`);
+              if (topicEl) topicEl.innerText = repo.topic || "Project";
+              const langEl = document.getElementById(`${id}_lang`);
+              if (langEl) langEl.innerText = repo.language;
+            });
+          }
+
+          if (data.chronicle) {
+            const c = data.chronicle;
+            document.getElementById("chronicle_total_vol").innerText =
+              c.total_contribution_volume.toLocaleString();
+            document.getElementById("chronicle_growth").innerHTML =
+              `<span class="material-symbols-outlined text-sm">trending_up</span> ${c.growth_percentage} vs last year`;
+            document.getElementById("chronicle_streak").innerText = `${c.current_streak} Days`;
+            document.getElementById("chronicle_peak_date").innerText = c.peak_activity_day.date;
+            if (c.monthly_focus_html) {
+              document.getElementById("chronicle_focus_container").innerHTML = c.monthly_focus_html;
+            } else {
+              document.getElementById("chronicle_focus_container").innerText =
+                `Current heavy activity detected in ${c.monthly_focus}.`;
+            }
+            document.getElementById("chronicle_productive_day").innerText = c.most_productive_day;
+            const dialectsContainer = document.getElementById("chronicle_dialects");
+            dialectsContainer.innerHTML = "";
+            if (c.languages) {
+              c.languages.forEach((lang) => {
+                const div = document.createElement("div");
+                div.className = "group cursor-default";
+                div.innerHTML = `
+                                <div class="flex justify-between items-baseline mb-3">
+                                    <span class="font-display font-bold text-lg text-primary">${lang.name}</span>
+                                    <span class="font-mono text-sm text-primary/60">${lang.percent}%</span>
+                                </div>
+                                <div class="h-[2px] w-full bg-line">
+                                    <div class="dialect-bar h-[2px] transition-all duration-1000 ease-out" style="width: 0%; background-color: ${lang.color}"></div>
+                                </div>
+                            `;
+                dialectsContainer.appendChild(div);
+                setTimeout(() => {
+                  const bar = div.querySelector(".dialect-bar");
+                  if (bar) bar.style.width = `${lang.percent}%`;
+                }, 100);
+              });
+            }
+            const stackContainer = document.getElementById("chronicle_stack");
+            const stack = c.stack || ["Linux", "Neovim", "Arch", "Hyprland"];
+            stackContainer.innerHTML = stack
+              .map(
+                (s) =>
+                  `<span class="px-2 py-1 border border-line text-xs font-medium text-primary/70">${s}</span>`,
+              )
+              .join("");
+            if (c.stats && c.stats.timeline) {
+              const svg = document.getElementById("chronicle_svg");
+              const width = 800;
+              const height = 300;
+              const timeline = c.stats.timeline;
+              if (timeline.length > 0) {
+                const maxCount = Math.max(...timeline.map((d) => d.count), 1);
+                const stepX = width / (timeline.length - 1);
+                let points = timeline.map((d, i) => [
+                  i * stepX,
+                  height - (d.count / maxCount) * (height - 50),
+                ]);
+                let dPath = `M ${points[0][0]},${points[0][1]}`;
+                for (let i = 0; i < points.length - 1; i++) {
+                  const p0 = points[i],
+                    p1 = points[i + 1];
+                  const cp1x = p0[0] + (p1[0] - p0[0]) / 2,
+                    cp1y = p0[1];
+                  const cp2x = p0[0] + (p1[0] - p0[0]) / 2,
+                    cp2y = p1[1];
+                  dPath += ` C ${cp1x},${cp1y} ${cp2x},${cp2y} ${p1[0]},${p1[1]}`;
+                }
+                const areaPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                areaPath.setAttribute("d", `${dPath} L ${width},${height} L 0,${height} Z`);
+                areaPath.setAttribute("fill", "url(#gradient-fill)");
+                svg.appendChild(areaPath);
+                const strokePath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                strokePath.setAttribute("d", dPath);
+                strokePath.setAttribute("fill", "none");
+                strokePath.setAttribute("stroke", "#1A1A1A");
+                strokePath.setAttribute("stroke-width", "2");
+                svg.appendChild(strokePath);
+                if (c.top_activities) {
+                  const placedTooltips = [];
+                  c.top_activities.forEach((activity) => {
+                    const idx = timeline.findIndex(
+                      (t) =>
+                        new Date(t.date).toLocaleDateString("en-US", {
+                          month: "short",
+                          day: "numeric",
+                        }) === activity.date,
+                    );
+                    if (idx !== -1) {
+                      const [cx, cy] = points[idx];
+                      const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+                      g.setAttribute("class", "cursor-pointer group/point");
+                      const circle = document.createElementNS(
+                        "http://www.w3.org/2000/svg",
+                        "circle",
+                      );
+                      circle.setAttribute("cx", cx);
+                      circle.setAttribute("cy", cy);
+                      circle.setAttribute("r", "4");
+                      circle.setAttribute("fill", "#1A1A1A");
+                      g.appendChild(circle);
+                      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                      line.setAttribute("x1", cx);
+                      line.setAttribute("x2", cx);
+                      line.setAttribute("y1", cy);
+                      line.setAttribute("y2", height);
+                      line.setAttribute("stroke", "#C94B28");
+                      line.setAttribute("stroke-dasharray", "4 4");
+                      line.setAttribute("stroke-width", "1");
+                      g.appendChild(line);
+                      const tooltipWidth = 160,
+                        tooltipHeight = 50;
+                      let fx = cx - tooltipWidth / 2,
+                        fy = cy - 60;
+                      if (fx < 0) fx = 0;
+                      if (fx + tooltipWidth > width) fx = width - tooltipWidth;
+                      let collision = true,
+                        attempts = 0;
+                      while (collision && attempts < 5) {
+                        collision = false;
+                        for (const rect of placedTooltips) {
+                          if (
+                            fx < rect.x + rect.w &&
+                            fx + tooltipWidth > rect.x &&
+                            fy < rect.y + rect.h &&
+                            fy + tooltipHeight > rect.y
+                          ) {
+                            collision = true;
+                            break;
+                          }
+                        }
+                        if (collision) {
+                          if (attempts === 0) fy = cy + 20;
+                          else if (attempts === 1) fy = cy - 120;
+                          else fx += 20;
+                          attempts++;
+                        }
+                      }
+                      placedTooltips.push({ x: fx, y: fy, w: tooltipWidth, h: tooltipHeight });
+                      const fo = document.createElementNS(
+                        "http://www.w3.org/2000/svg",
+                        "foreignObject",
+                      );
+                      fo.setAttribute("x", fx);
+                      fo.setAttribute("y", fy);
+                      fo.setAttribute("width", tooltipWidth);
+                      fo.setAttribute("height", tooltipHeight);
+                      fo.innerHTML = `<div class="bg-primary text-paper text-xs p-2 shadow-lg" xmlns="http://www.w3.org/1999/xhtml"><div class="font-serif italic">${activity.date}</div><div class="font-mono">${activity.count} Commits</div></div>`;
+                      g.appendChild(fo);
+                      svg.appendChild(g);
+                    }
+                  });
+                }
+              }
+            }
+          }
+        } catch (e) {
+          console.error("Error loading data", e);
+        }
+      }
+      render();
+    </script>
+  </body>
+</html>
+
