@@ -2,11 +2,7 @@ export const config = {
   username: "linuxmobile",
   pinned: [
     {
-      name: "hyprland-dots",
-      topic: "Hyprland Dotfiles",
-    },
-    {
-      name: "kaku",
+      name: "shin",
       topic: "NixOS Configuration Flake",
     },
     {
@@ -14,16 +10,20 @@ export const config = {
       topic: "Discord TUI",
     },
     {
-      name: "bugbounty-flake",
+      name: "hibiki",
+      topic: "Keyboard Visualizer",
+    },
+    {
+      name: "kai",
       topic: "Cybersecurity Environment",
     },
     {
-      name: "palettePilot",
+      name: "tsumugu",
       topic: "Color Utility",
     },
     {
-      name: "keystroke",
-      topic: "Keyboard Visualizer",
+      name: "hyprland-dots",
+      topic: "Hyprland Dotfiles",
     },
   ],
   chronicle: {
