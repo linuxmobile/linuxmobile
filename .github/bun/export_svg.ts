@@ -43,7 +43,7 @@ try {
   const page = await browser.newPage();
 
   await page.setViewport({
-    width: 1900,
+    width: 1400,
     height: 1000,
     deviceScaleFactor: 2,
   });
