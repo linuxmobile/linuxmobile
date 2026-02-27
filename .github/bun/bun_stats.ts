@@ -11,10 +11,22 @@ if (!token) {
 const username = config.username;
 
 const now = new Date();
-const currentYearStart = new Date(now.getFullYear(), 0, 1).toISOString();
+const currentYearStart = new Date(
+  now.getFullYear() - 1,
+  now.getMonth() + 1,
+  1,
+).toISOString();
 const currentYearEnd = now.toISOString();
-const lastYearStart = new Date(now.getFullYear() - 1, 0, 1).toISOString();
-const lastYearEnd = new Date(now.getFullYear() - 1, 11, 31).toISOString();
+const lastYearStart = new Date(
+  now.getFullYear() - 2,
+  now.getMonth() + 1,
+  1,
+).toISOString();
+const lastYearEnd = new Date(
+  now.getFullYear() - 1,
+  now.getMonth() + 1,
+  0,
+).toISOString();
 
 const pinnedReposQuery = config.pinned
   .map(
@@ -360,6 +372,6 @@ export async function generateStats() {
 if (import.meta.main) {
   const output = await generateStats();
   const jsonOutput = JSON.stringify(output, null, 2);
-  await Bun.write(".github/bun/data.json", jsonOutput);
+  await Bun.write("./data.json", jsonOutput);
   console.log(jsonOutput);
 }
