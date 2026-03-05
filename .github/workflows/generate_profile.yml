@@ -21,6 +21,7 @@ jobs:
 
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v1
+        id: setup-chrome
         with:
           chrome-version: stable
 
@@ -33,7 +34,7 @@ jobs:
         working-directory: .github/bun
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+          PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
 
       - name: Commit and push changes
         run: |

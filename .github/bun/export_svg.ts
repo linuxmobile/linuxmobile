@@ -1,3 +1,4 @@
+import { existsSync } from "fs";
 import { file, serve } from "bun";
 import { join } from "path";
 import puppeteer from "puppeteer-core";
@@ -10,6 +11,12 @@ const CHROMIUM_PATH =
   "/etc/profiles/per-user/linuxmobile/bin/chromium";
 
 console.log("🚀 Starting SVG Export process (File-less mode)...");
+console.log(`🔍 Chromium path: ${CHROMIUM_PATH}`);
+
+if (!existsSync(CHROMIUM_PATH)) {
+  console.error(`❌ Chromium binary not found at: ${CHROMIUM_PATH}`);
+  process.exit(1);
+}
 
 try {
   console.log("📊 Fetching GitHub statistics...");
@@ -33,10 +40,13 @@ try {
 
   const browser = await puppeteer.launch({
     executablePath: CHROMIUM_PATH,
+    headless: true,
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
       "--disable-web-security",
+      "--disable-gpu",
+      "--disable-dev-shm-usage",
     ],
   });
 
